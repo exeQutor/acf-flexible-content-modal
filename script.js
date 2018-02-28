@@ -23,8 +23,8 @@ function acf_fc_modal_init() {
 	jQuery('.acf-flexible-content .layout:not(.acf-clone)').each(function() {
 		var layout = jQuery(this);
 				
-		// Ignoring if it is a nested FC
-		if(layout.parents('.acf-fields').length > 1)
+		// Ignoring if it is a nested FC or Repeater
+		if(layout.parent('.acf-fields').length > 1)
 			return true;
 		else
 			layout.addClass('fc-modal');
